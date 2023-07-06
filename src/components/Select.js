@@ -5,14 +5,16 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 
-export default function BasicSelect({ handleValute, currency }) {
+export default function BasicSelect({ handleValute,state,handleState }) {
   
-  const [state, setState] = React.useState(currency);
   const handleChange = (e) => {
     const click = `${e.target.value}`;
     handleValute(`${click.substring(0, 3)}`);
-    setState(e.target.value);
+    handleState(e.target.value);
   };
+  const dfsf=(data)=>{
+    handleState(data)
+  }
 
   return (
     <Box sx={{ minWidth: 120 }}>
@@ -27,7 +29,7 @@ export default function BasicSelect({ handleValute, currency }) {
           <MenuItem
             value={"RUB"}
             onClick={() => {
-              setState("RUB");
+              dfsf("RUB");
             }}
           >
             RUB Российский рубль
@@ -35,7 +37,7 @@ export default function BasicSelect({ handleValute, currency }) {
           <MenuItem
             value={`USD`}
             onClick={() => {
-              setState("USD");
+              dfsf("USD");
             }}
           >
             USD Американский доллар
@@ -43,7 +45,7 @@ export default function BasicSelect({ handleValute, currency }) {
           <MenuItem
             value={`EUR`}
             onClick={() => {
-              setState("EUR");
+              dfsf("EUR");
             }}
           >
             EUR Евро
@@ -51,7 +53,7 @@ export default function BasicSelect({ handleValute, currency }) {
           <MenuItem
             value={`YUN`}
             onClick={() => {
-              setState("YAN");
+              dfsf("YAN");
             }}
           >
             YUN Юань

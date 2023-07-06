@@ -3,7 +3,6 @@ import { getValutes } from "../utils/api.js";
 import BasicSelect from "./Select.js";
 
 function App() {
-  const [flag, setFlag] = React.useState(null);
   const [usd, setUSD] = React.useState();
   const [eur, setEuro] = React.useState();
   const [yun, setYuan] = React.useState();
@@ -18,7 +17,7 @@ function App() {
   const [toValute, setToValute] = React.useState("USD");
 
 
-  const [deg,setDeg]=React.useState(180)
+  const [deg,setDeg]=React.useState(180);
   function handleChangeParametr() {
     const country = fromValute;
     setDeg(deg+90);
@@ -26,10 +25,19 @@ function App() {
     setDataInput(toResult);
     setFromValute(toValute);
     setToValute(country);
-    setFlag(false);
+    let storage=fromState;
+    setFromState(toState);
+    setToState(storage);
     
   }
-
+  const [fromState, setFromState] = React.useState('RUB');
+  const [toState, setToState] = React.useState('USD');
+  function handleFromState(data) {
+    setFromState(data);
+  }
+  function handleToState(data) {
+    setToState(data);
+  }
   function handleToValute(data) {
     setToValute(data);
   }
@@ -73,7 +81,8 @@ function App() {
         <div className="app__container__box">
           <BasicSelect
             handleValute={handleFromValute}
-            currency={flag ? toValute : fromValute}
+            state={fromState}
+            handleState={handleFromState}
           />
           <input
             type="number"
@@ -95,7 +104,8 @@ function App() {
         <div className="app__container__box">
           <BasicSelect
             handleValute={handleToValute}
-            currency={flag ? fromValute : toValute}
+            state={toState}
+            handleState={handleToState}
           />
           <div className="app__container__box__result">
             {toResult.toFixed(2)}
