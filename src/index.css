@@ -1,86 +1,28 @@
-
+@import url(../src/blocks/app/app.css);
+@import url(../src/blocks/app/__container/app__container.css);
+@import url(../src/blocks/app/__container/__box/app__container__box.css);
+@import url(../src/blocks/app/__container/__button/app__container__button.css);
+@import url(../src/blocks/app/__container/__box/__valute/app__container__box__valute.css);
+@import url(../src/blocks/app/__container/__box/__result/app__container__box__result.css);
+@import url(../src/blocks/app/__container/__box/__input/app__container__box__input.css);
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-.App{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  flex-direction: row;
-  align-content: space-between;
-  height: 723px;
-}
-.App__container{
-	margin:50px;
-    display: flex;
-    flex-direction: column;
-    height: 30vh;
-    border: 0;
-}
-.App__container__box{
-  width: 400px;
-  height: 200px;
-  flex-shrink: 0;
-  border-radius: 8px;
-  border: 1px solid #CDCDCD;
-}
-.App__container__button{
-  width: 100px;
-  height: 100px;
-  background-image: url(../images/icons8-swap-48.png);
-  rotate: 90deg;
-  background-color: white;
-  margin: auto auto;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 50%;
-  border: 0;
-}
-.App__container__box__select{
+
+.App__container__box__select {
   width: 100%;
   height: 20%;
-
   border-radius: 8px 8px 0 0px;
 }
-.valute{
-	display: flex;
-    margin-left: 20px;
-    align-items: flex-end;
-    
-}
-.inputChange{
-	border:0;
-	cursor: pointer;
-	width:70%;
-	margin: 20px;
-	border: 0px;
-	outline: none;
-	font-style: normal;
-	font-weight: 400;
-	font-size: 24px;
-	padding:0;
-	line-height: 2.214;	
-}
-.App__container__box__result{
-	border:0;
-	cursor: pointer;
-	width:70%;
-	margin: 20px;
-	border: 0px;
-	font-style: normal;
-	font-weight: 400;
-	font-size: 24px;
-	padding:0;
-	line-height: 2.214;	
-}
+
+

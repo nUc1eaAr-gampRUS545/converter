@@ -1,0 +1,7 @@
+.app__container {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 30vh;
+    border: 0;
+  }

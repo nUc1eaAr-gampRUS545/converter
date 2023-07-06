@@ -1,0 +1,14 @@
+.app {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  max-width: 80%;
+  flex-direction: row;
+  align-content: space-between;
+  height: 723px;
+}
+@media screen  and (max-width:1250px){
+  .app{
+  flex-direction: column;}
+}

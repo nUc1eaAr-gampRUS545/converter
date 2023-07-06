@@ -1,0 +1,5 @@
+.app__container__box__valute {
+    display: flex;
+    margin-left: 20px;
+    align-items: flex-end;
+  }
