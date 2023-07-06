@@ -49,7 +49,7 @@ function App() {
     const result=`1 ${toValute} = ${(
       toMoney / rates[fromValute]
     ).toFixed(2)} ${fromValute} `
-    return result;
+    return result; 
   }
   React.useEffect(() => {
     getValutes()

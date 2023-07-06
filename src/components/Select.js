@@ -7,14 +7,11 @@ import Select from "@mui/material/Select";
 
 export default function BasicSelect({ handleValute, currency }) {
   
-  const [bum, setBum] = React.useState(currency);
-  
-
-
+  const [state, setState] = React.useState(currency);
   const handleChange = (e) => {
-    const cak = `${e.target.value}`;
-    handleValute(`${cak.substring(0, 3)}`);
-    setBum(e.target.value);
+    const click = `${e.target.value}`;
+    handleValute(`${click.substring(0, 3)}`);
+    setState(e.target.value);
   };
 
   return (
@@ -24,13 +21,13 @@ export default function BasicSelect({ handleValute, currency }) {
         <Select
           labelId="demo-simple-select-label"
           id="demo-simple-select"
-          value={bum}
+          value={state}
           onChange={handleChange}
         >
           <MenuItem
             value={"RUB"}
             onClick={() => {
-              setBum("RUB");
+              setState("RUB");
             }}
           >
             RUB Российский рубль
@@ -38,7 +35,7 @@ export default function BasicSelect({ handleValute, currency }) {
           <MenuItem
             value={`USD`}
             onClick={() => {
-              setBum("USD");
+              setState("USD");
             }}
           >
             USD Американский доллар
@@ -46,7 +43,7 @@ export default function BasicSelect({ handleValute, currency }) {
           <MenuItem
             value={`EUR`}
             onClick={() => {
-              setBum("EUR");
+              setState("EUR");
             }}
           >
             EUR Евро
@@ -54,7 +51,7 @@ export default function BasicSelect({ handleValute, currency }) {
           <MenuItem
             value={`YUN`}
             onClick={() => {
-              setBum("YAN");
+              setState("YAN");
             }}
           >
             YUN Юань
