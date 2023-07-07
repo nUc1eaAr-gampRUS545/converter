@@ -6,7 +6,7 @@
   max-width: 80%;
   flex-direction: row;
   align-content: space-between;
-  height: 723px;
+  height: 650px;
 }
 @media screen  and (max-width:1250px){
   .app{

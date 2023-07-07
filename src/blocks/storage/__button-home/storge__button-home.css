@@ -1,0 +1,13 @@
+.storge__button-home{
+    background-image: url(../../../../images/icons8-главная.svg);
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 48px;
+    height: 48px;
+    border: 0;
+    
+    margin: 0 auto;
+    margin-bottom: 30px;
+   
+}

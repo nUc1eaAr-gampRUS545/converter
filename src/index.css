@@ -5,6 +5,13 @@
 @import url(../src/blocks/app/__container/__box/__valute/app__container__box__valute.css);
 @import url(../src/blocks/app/__container/__box/__result/app__container__box__result.css);
 @import url(../src/blocks/app/__container/__box/__input/app__container__box__input.css);
+@import url(../src/blocks/app/__saved/app__saved.css);
+@import url(../src/blocks/app/__navigate/app__navigate.css);
+@import url(../src/blocks/storage/__box/storage__box.css);
+@import url(../src/blocks/storage/__button-home/storge__button-home.css);
+@import url(../src/blocks/storage/storage.css);
+@import url(../src/blocks/storage/__container/storage__container.css);
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -24,5 +31,15 @@ code {
   height: 20%;
   border-radius: 8px 8px 0 0px;
 }
-
-
+.blockButton{
+  width: 80%;
+  margin: auto;
+  display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+}
+@media screen  and (max-width:1250px){
+  .blockButton{
+  flex-direction: column;}
+}

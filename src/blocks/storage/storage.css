@@ -1,0 +1,13 @@
+.storage{
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  max-width: 80%;
+  flex-direction: column;
+  height: 650px;
+}
+@media screen  and (max-width:450px){
+  .storage__container{
+      width:100%;}
+}

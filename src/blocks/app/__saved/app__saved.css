@@ -1,0 +1,27 @@
+.app__saved {
+    width: 258px;
+    background-color: #000000;
+    color: #fff;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 45px;
+    margin: 0 auto 34px auto;
+    text-align: center;
+    transition: opacity 0.2s ease-in-out;
+    cursor: pointer;
+    border-radius: 2px;
+    border:0;
+  }
+  .app__saved:hover{
+    opacity: .8;
+  }
+@media screen and (max-width:600px){
+    .app__saved{
+    width: 238px;
+    font-size: 14px;
+    margin: 40px auto 0 auto;
+    line-height: 46px;
+  }
+
+}
