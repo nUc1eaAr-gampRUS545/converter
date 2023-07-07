@@ -10,7 +10,10 @@ function App() {
       let module='';
       module=`${localStorage.getItem(`${i}`)}`
       spisok.push(module);
-    }}
+      
+    }
+    
+  }
     
   return (
     <div className="page">

@@ -1,13 +1,15 @@
 .storage{
   display: flex;
   margin: auto;
+  margin-top: 10%;
   justify-content: center;
   align-items: center;
-  max-width: 80%;
+width: 80%;
   flex-direction: column;
-  height: 650px;
+  box-sizing: border-box;
+  
 }
-@media screen  and (max-width:450px){
+@media screen  and (max-width:550px){
   .storage__container{
-      width:100%;}
+    width:80vw;}
 }
