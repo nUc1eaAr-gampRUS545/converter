@@ -13,8 +13,6 @@ return(
 export function getLocation(){
   return(
     fetch('https://ipwho.is/')
-    .then(function (response) {
-        return response.json();
-    }))
+    .then(checkResponse))
   }
 
