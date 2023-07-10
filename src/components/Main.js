@@ -4,17 +4,23 @@ import { useNavigate} from "react-router-dom";
 import BasicSelect from "./Select.js";
 
 
-function Main({spisok}) {
+function Main({spisok,startValute,setSpisok}) {
   const massivCounter=[];
-  const massivReverse=spisok; 
+  const massivReverse=spisok;
+
+
   
-  var startToValute='USD';
-  var startFromValute='RUB';
+  
+  
   if(massivReverse[0] != undefined){
     var startToValute=`${massivReverse[spisok.length - 1].substring(2,5)}`;
     var startFromValute=`${massivReverse[spisok.length - 1].slice(13).replace(/\s/g, '')}`;
   }
-  
+  else{
+    var startFromValute=startValute;
+    var startToValute='USD'
+  }
+    
   const [fromState, setFromState] = React.useState(startFromValute);
   const [toState, setToState] = React.useState(startToValute);
   const [dataInput, setDataInput] = React.useState(1000);
@@ -36,13 +42,12 @@ function Main({spisok}) {
 
   function addToTheBest() {
     setCounter(counter + 1);
-    
-    const result = `1 ${toValute} = ${(toMoney / rates[fromValute]).toFixed(
-      2
-    )} ${fromValute} `;
+    const result = `1 ${toValute} = ${(toMoney / rates[fromValute]).toFixed(2)} ${fromValute} `;
     localStorage.setItem(`${counter}`, result);
+    setSpisok(value=>[...value,result])
   }
   function handleChangeParametr() {
+    
     const country = fromValute;
     setDeg(deg + 90);
     document.querySelector(
@@ -83,7 +88,8 @@ function Main({spisok}) {
     )} ${fromValute} `;
     return result;
   }
-  React.useEffect(() => {
+  
+  React.useEffect(() => { 
     getValutes()
       .then((json) => {
         setUSD(json.wap_rates.data[0][4]);
@@ -107,7 +113,7 @@ function Main({spisok}) {
   const toMoney = rates[toValute];
   const toResult = (dataInput * rates[fromValute]) / rates[toValute];
   function goToFavorite(){
-    navigate('/storage')
+    navigate('/')
   }
   return (
     <>
